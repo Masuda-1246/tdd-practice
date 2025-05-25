@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Pre-commit checks running..."
+
+# コード品質チェックと自動修正
+echo "📋 Running biome check:fix..."
+npm run check:fix || exit 1
+
+echo "🔧 Running lint:fix..."
+npm run lint:fix || exit 1
+
+echo "💅 Running format:fix..."
+npm run format:fix || exit 1
+
+echo "🧪 Running tests..."
+npm test -- --run || exit 1
+
+echo "✅ All pre-commit checks passed!"
