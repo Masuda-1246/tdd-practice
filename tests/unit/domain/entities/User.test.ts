@@ -1,6 +1,6 @@
 import { User } from '@domain/entities/User';
-import { Name } from '@domain/value-objects/Name';
 import { Email } from '@domain/value-objects/Email';
+import { Name } from '@domain/value-objects/Name';
 import { Password } from '@domain/value-objects/Password';
 import { describe, expect, it } from 'vitest';
 

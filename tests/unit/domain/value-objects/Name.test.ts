@@ -30,20 +30,22 @@ describe('Name 値オブジェクト', () => {
   });
 
   it('記号のみの名前はエラーをスローすること', () => {
-    expect(() => new Name('!@#$')).toThrow('名前には少なくとも1つの文字または数字が含まれる必要があります');
+    expect(() => new Name('!@#$')).toThrow(
+      '名前には少なくとも1つの文字または数字が含まれる必要があります'
+    );
   });
 
   it('同じ値を持つ別の名前と等価であること', () => {
     const name1 = new Name('田中太郎');
     const name2 = new Name('田中太郎');
-    
+
     expect(name1.equals(name2)).toBe(true);
   });
 
   it('異なる値を持つ別の名前とは等価でないこと', () => {
     const name1 = new Name('田中太郎');
     const name2 = new Name('山田花子');
-    
+
     expect(name1.equals(name2)).toBe(false);
   });
 });

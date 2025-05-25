@@ -5,7 +5,8 @@ export class Name {
   private static readonly ERROR_EMPTY = '名前は空にできません';
   private static readonly ERROR_ONLY_WHITESPACE = '名前は空白のみにできません';
   private static readonly ERROR_TOO_SHORT = '名前は2文字以上である必要があります';
-  private static readonly ERROR_ONLY_SYMBOLS = '名前には少なくとも1つの文字または数字が含まれる必要があります';
+  private static readonly ERROR_ONLY_SYMBOLS =
+    '名前には少なくとも1つの文字または数字が含まれる必要があります';
 
   // 文字または数字が含まれているかをチェックする正規表現
   private static readonly LETTER_OR_DIGIT_REGEX = /[a-zA-Z0-9\p{L}]/u;
@@ -60,4 +61,4 @@ export class Name {
   equals(other: Name): boolean {
     return this._value === other._value;
   }
-} 
+}

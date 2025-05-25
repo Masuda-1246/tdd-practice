@@ -3,7 +3,8 @@ export class Password {
 
   // エラーメッセージを定数として定義
   private static readonly ERROR_TOO_SHORT = 'パスワードは8文字以上である必要があります';
-  private static readonly ERROR_MISSING_CHAR_TYPES = 'パスワードは大文字、小文字、数字をすべて含む必要があります';
+  private static readonly ERROR_MISSING_CHAR_TYPES =
+    'パスワードは大文字、小文字、数字をすべて含む必要があります';
 
   // 文字種をチェックする正規表現
   private static readonly UPPERCASE_REGEX = /[A-Z]/;
