@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+name: GenerateTestFromSpec
+manual: true
+input: "spec file name (e.g. specs/User.spec.md)"
+actions:
+  - read: "{{input}}"
+  - generate:
+      description: >
+        Read the spec markdown file '{{input}}', and generate a corresponding TypeScript unit test file '{{basename}}.test.ts'.
+        Cover all valid/invalid cases and method behavior mentioned in the spec using Vitest.
+      output: "tests/{{basename}}.test.ts"

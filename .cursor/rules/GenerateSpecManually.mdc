@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+name: GenerateSpecManually
+manual: true
+input: "entity name (e.g. User)"
+actions:
+  - read: "specs/template.md"
+  - generate:
+      description: >
+        Use the contents of template.md to scaffold a new spec for the entity '{{input}}'.
+        Replace all placeholders like {{Entity}} with '{{input}}'.
+      output: "specs/{{input}}.spec.md"

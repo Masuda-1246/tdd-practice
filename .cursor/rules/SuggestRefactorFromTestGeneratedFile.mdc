@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+name: SuggestRefactorFromGeneratedImpl
+manual: true
+input: "path to the generated implementation file (e.g. src/User.ts)"
+actions:
+  - read: "{{input}}"
+  - generate:
+      description: >
+        The file {{input}} was automatically generated based on a test file and may have minimal or redundant logic.
+        Review the code and suggest refactoring improvements to enhance readability, maintainability, and domain consistency.
+        Avoid changing any core business logic, but restructure code for clarity (e.g., extract methods, remove duplication, name cleanups).
+        Provide a diff-style or inline suggestion format.
